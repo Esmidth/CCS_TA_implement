@@ -22,6 +22,7 @@ Xorig = imageio.imread('rome.jpg', as_gray=True, pilmode='L')
 # print(ny,nx)
 X = spimg.zoom(Xorig, 0.04)
 ny, nx = X.shape
+print(X.shape)
 # plt.imshow(Xorig)
 # plt.imshow(X)
 # plt.show()
@@ -29,6 +30,7 @@ ny, nx = X.shape
 # extract small sample of signal
 k = round(nx * ny * 0.5)  # 50% sample
 ri = np.random.choice(nx * ny, k, replace=False)
+print("ri/n",ri.shape)
 b = X.T.flat[ri]
 # b = np.expand_dims(b, axis=1)
 print(b.shape)
@@ -38,7 +40,9 @@ A = np.kron(
     spfft.idct(np.identity(nx), norm='ortho', axis=0),
     spfft.idct(np.identity(ny), norm='ortho', axis=0)
 )
+print('before',A.shape)
 A = A[ri, :]
+print('after',A.shape)
 
 # do L1 optimization
 vx = cvx.Variable(nx * ny)
