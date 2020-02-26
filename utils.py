@@ -2,7 +2,7 @@ import numpy as np
 import torch.optim as optim
 import pandas as pd
 import matplotlib.pyplot as plt
-from consts import lat,log
+from consts import res,lat,log
 
 def get_data(dataset):
     """return pandas.Dataframe"""
@@ -33,7 +33,7 @@ def draw_rat_heatmap(df,res,lat=lat,log=log):
             pic[i][j] = len(sub_df)
     return pic
 
-def draw_pics(pic_list,arrange=(1,8),init_name=2010,figsize=(8,8)):
+def draw_pics(pic_list,arrange=(1,8),init_name=2010,figsize=(8,8),filename=None):
     plt.figure(figsize=figsize)
     x = arrange[0]
     y = arrange[1]
@@ -48,7 +48,11 @@ def draw_pics(pic_list,arrange=(1,8),init_name=2010,figsize=(8,8)):
         else:
             plt.title(init_name)
     plt.tight_layout()
-    plt.show()
+    
+    if(filename == None):
+        plt.show()
+    else:
+        plt.savefig(filename,dpi=300)
 
 def get_year_heatmap(date_range,df,res=res):
     """date_range: (start_year,end_year)"""

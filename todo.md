@@ -22,5 +22,6 @@
 
 ## Todo List
 - [ ] utils.py
-- [x] 
-
+- [ ] 数据集的裁剪和重新保存
+- [ ] 编写数据集的dataset和dataloader
+- [ ] 多个batch和epoch，验证现有learning base的可用性
