@@ -1,0 +1,9 @@
+{
+    "python.pythonPath": "/Users/anruolin/.pyenv/versions/anaconda3-2019.03/envs/ksvd/bin/python",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    }
+}

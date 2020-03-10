@@ -3,6 +3,8 @@ import torch.optim as optim
 import pandas as pd
 import matplotlib.pyplot as plt
 from consts import res,lat,log
+# Latitude 维度
+# Longitude 经度
 
 def get_data(dataset):
     """return pandas.Dataframe"""
