@@ -38,12 +38,13 @@ X = X-128
 # print(X.mean(),X.max(),X.min())
 
 # extract small sample of signal
-k = round(nx * ny * 0.5)  # 50% sample
+k = round(nx * ny * 0.4)  # 50% sample
 ri = np.random.choice(nx * ny, k, replace=False)
 print("ri/n",ri.shape)
 b = X.T.flat[ri]
 # b = np.expand_dims(b, axis=1)
-print(b.shape)
+print(ri)
+print(b)
 
 # create dct matrix operator using kron
 A = np.kron(
@@ -60,41 +61,41 @@ Xm = 255 * np.ones(X.shape)
 Xm.T.flat[ri] = X.T.flat[ri]
 
 # do L1 optimization
-# vx = cvx.Variable(nx * ny)
-# objective = cvx.Minimize(cvx.norm(vx, 1))
-# constraints = [A * vx == b]
-# prob = cvx.Problem(objective, constraints)
-# result = prob.solve(verbose=True)
-# Xat2 = np.array(vx.value).squeeze()
+vx = cvx.Variable(nx * ny)
+objective = cvx.Minimize(cvx.norm(vx, 1))
+constraints = [A * vx == b]
+prob = cvx.Problem(objective, constraints)
+result = prob.solve(verbose=True)
+Xat2 = np.array(vx.value).squeeze()
 
-vx = Variable(torch.randn(nx*ny,dtype=float),requires_grad=True)
+# vx = Variable(torch.randn(nx*ny,dtype=float),requires_grad=True)
 # vx = Variable(torch.tensor(Xm.flatten(),dtype=float),requires_grad=True)
 
 # vx[ri].detach_()
-A = Variable(torch.tensor(A,dtype=float))
-b = Variable(torch.tensor(b,dtype=float))
+# A = Variable(torch.tensor(A,dtype=float))
+# b = Variable(torch.tensor(b,dtype=float))
 
-num_epochs = 31000
-optimzier = optim.Adam([vx],lr=0.01)
-# loss_fn = torch.nn.L1Loss(reduce=False, size_average=False)
+# num_epochs = 31000
+# optimzier = optim.Adam([vx],lr=0.01)
+# # loss_fn = torch.nn.L1Loss(reduce=False, size_average=False)
 
-loss = 1000000
-epoch = 0
+# loss = 1000000
+# epoch = 0
 
-# for epoch in range(num_epochs):
-while(loss > 0.001):
-    epoch += 1
-    optimzier.zero_grad()
-    b_pred = torch.mv(A,vx)
-    # loss = loss_fn(b_pred,b).sum()
-    loss = ((b_pred-b)**2).sum()
-    loss.backward(retain_graph=True)
-    # vx = normalize(vx,p=2,dim=-1)
-    optimzier.step()
-    if epoch % 100 == 0:
-        print(epoch,"loss: {:.3f}".format(loss.data))
+# # for epoch in range(num_epochs):
+# while(loss > 0.001):
+#     epoch += 1
+#     optimzier.zero_grad()
+#     b_pred = torch.mv(A,vx)
+#     # loss = loss_fn(b_pred,b).sum()
+#     loss = ((b_pred-b)**2).sum()
+#     loss.backward(retain_graph=True)
+#     # vx = normalize(vx,p=2,dim=-1)
+#     optimzier.step()
+#     if epoch % 100 == 0:
+#         print(epoch,"loss: {:.3f}".format(loss.data))
     
-Xat2 = vx.detach().numpy()
+# Xat2 = vx.detach().numpy()
 
 # reconstruct signal
 Xat = Xat2.reshape(nx, ny)

@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/anruolin/.pyenv/versions/anaconda3-2019.03/envs/ksvd/bin/python",
+    "python.pythonPath": "/Users/anruolin/.pyenv/versions/anaconda3-2019.03/envs/skleran23/bin/python",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
