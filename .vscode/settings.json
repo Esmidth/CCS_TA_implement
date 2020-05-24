@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/Users/anruolin/.pyenv/versions/anaconda3-2019.03/envs/skleran23/bin/python",
+    "python.pythonPath": "C:\\Anaconda3\\python.exe",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,

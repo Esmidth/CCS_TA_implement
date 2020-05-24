@@ -36,7 +36,10 @@
 | rename.ipynb | Transform data in *data.h5,df_sub* into data in *day.h5,start_point*, which starts from unix time 1162393768 |
 | svd_tmp.ipynb | try to use *scipy & numpy* implementing svd |
 | **tensor.ipynb** | try to build tensor used in GAN, including *remove_duplicated, dataframe_to_matrix* |
-| tensor1.ipynb | Empty |
+| **tensor1.ipynb** | Store data into hdf5 dataset, implement dataset_write & dataset_read function |
+|tensor2.ipynb| Test dataset read & write|
+|**tensor3.ipynb**| try to work with dataload in Pytorch|
+|tensor4.ipynb| test Pytorch dataloader|
 | test.ipynb | Example of dealing with *data.pkl* |
 
 ## Procedure
@@ -47,4 +50,26 @@
 - 从整个数据集中，抽取一个子集，时间长度为一周，拥有最多的有效信号（45个）
 - 在子集中，确定最小的时间间隔，可以生成最多有效的数据帧
 
+## Dataset
+
+|Python Variable Name| HDF key Name |Description |Current Size|File Name|
+| ---- | ---- |---|---|----|
+| rb_sub_df_list_optimal | rb_optimal ||5959|ds_rb_optimal.h5|
+| sub_df_list_optimal | optimal ||5959|ds_optimal.h5|
+| sub_df_list | df_list ||20160|ds_df_list.h5|
+| a_temperature_array |      ||5959,44|dataset.hdf5|
+|a_temperature_mean|||5959|dataset.hdf5|
+|a_temperature_std|||5959|dataset.hdf5|
+|sub_df_list_optimal_index|||5959|dataset.hdf5|
+|time_stamp|||20161|dataset.hdf5|
+|dataloader|||batch_size=500|dataloader.pt|
+
+## Thoughts
+### 2020.5.2
+|mission|status|
+|----|---|
+|dataloader重新设计，区分测试集，验证集，训练集|done|
+|对数据集进行归一化处理，看看是否能改善GAN的性能|GAN只能生成归一化数据，如果将真实数据归一化，则可骗过Dis。|
+|加上latent z的求导，考虑这一步的作用||
+|引入部分抽样的功能||
 

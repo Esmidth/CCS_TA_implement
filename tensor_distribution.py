@@ -15,8 +15,8 @@ from consts import sensor_week_seconds as week_seconds
 from consts import sensor_start_time_unix as start_time
 from consts import sensor_end_time_unix as end_time
 from consts import sensor_epoch_length as epoch_length
-from consts import loc_pic
-from consts import drop_list
+from consts import sensor_loc_pic as loc_pic
+from consts import sensor_drop_list as drop_list
 import consts
 import time
 import pickle
@@ -61,7 +61,7 @@ if __name__ == '__main__':
     df = pd.read_hdf('optimal.h5','optimal_df')
 
     uniq_list = []
-    time_gaps = [31,32,33,34,35,36,37,38,39]
+    time_gaps = [30]
     # time_gaps = np.arange(50,3600,50)
     sum_list = np.zeros_like(time_gaps)
     for j,time_gap in enumerate(time_gaps):
