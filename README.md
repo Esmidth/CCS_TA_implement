@@ -73,7 +73,7 @@
 |加上latent z的求导，考虑这一步的作用||
 |引入部分抽样的功能||
 
-### 2020.5.24
+### 2020.6.6
 |state-of-art|description|
 |----|----|
 |ARMA & SARIMA| not yet|
@@ -81,7 +81,7 @@
 |Kriging| not yet|
 |AKE|not yet|
 |DESM| not yet|
-|IDW+SES|not yet|
+|IDW+SES|done|
 |CF|not yet|
 |NMF| not yet|
 |NMF-MVL|not yet|
