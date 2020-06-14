@@ -1,9 +1,11 @@
-# CCS-TA implement 
+# CCS-TA implement
 
 ## Init
 
 ## Project Structure
+
 ### Folders
+
 | Name| Description|
 |------|--------|
 |cvxpy_convex|Examples of using cvxpy library to solve convex optimization|
@@ -65,7 +67,9 @@
 |dataloader|||batch_size=500|dataloader.pt|
 
 ## Thoughts
+
 ### 2020.5.2
+
 |mission|status|
 |----|---|
 |dataloader重新设计，区分测试集，验证集，训练集|done|
@@ -74,6 +78,9 @@
 |引入部分抽样的功能||
 
 ### 2020.6.6
+
+#### Baseline
+
 |state-of-art|description|
 |----|----|
 |ARMA & SARIMA| not yet|
