@@ -48,7 +48,7 @@
 
 - read csv files of lune dataset
 - according to stations' GPS location, set a (lat,long) range, dividing the area to 10x10 sub areas.
-- For a specific area, choose the best station with the most logs as the area readings. 
+- For a specific area, choose the best station with the most logs as the area readings.
 - 从整个数据集中，抽取一个子集，时间长度为一周，拥有最多的有效信号（45个）
 - 在子集中，确定最小的时间间隔，可以生成最多有效的数据帧
 
@@ -86,9 +86,9 @@
 |ARMA & SARIMA| not yet|
 |stKNN|not yet|
 |Kriging| done|
-|AKE|doing|
+|AKE|done|
 |DESM| not yet|
 |IDW+SES|done|
 |CF|not yet|
-|NMF| not yet|
+|NMF| doing|
 |NMF-MVL|not yet|
