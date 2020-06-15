@@ -85,8 +85,8 @@
 |----|----|
 |ARMA & SARIMA| not yet|
 |stKNN|not yet|
-|Kriging| not yet|
-|AKE|not yet|
+|Kriging| done|
+|AKE|doing|
 |DESM| not yet|
 |IDW+SES|done|
 |CF|not yet|
