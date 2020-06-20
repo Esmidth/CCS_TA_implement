@@ -87,8 +87,9 @@
 |stKNN|not yet|
 |Kriging| done|
 |AKE|done|
-|DESM| doing|
+|DESM| delay|
 |IDW+SES|done|
 |CF|partial|
 |NMF| done|
 |NMF-MVL|not yet|
+
