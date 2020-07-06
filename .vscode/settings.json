@@ -1,5 +1,4 @@
 {
-    "python.pythonPath": "/home/esmidth/.pyenv/versions/anaconda3-2020.02/envs/ccs_ta/bin/python",
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,

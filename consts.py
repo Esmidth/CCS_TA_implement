@@ -30,3 +30,13 @@ sensor_loc_pic = [[  0. ,  0. ,  0. ,  0. ,  0.  , 0. ,  0. ,  0.  , 0. ,  0.],
 
 sensor_drop_list_old = [7,27,47,63,82,88]
 sensor_drop_list = [7, 27, 47,63, 55, 73,82] # optimal sensor num = 44
+
+sensor_df_dict = {'rb_optimal':5959,'optimal':5959,'df_list':20160}
+sensor_data_index = ['a_temperature_mean','a_temperature_std','a_temperature_array','sub_df_list_optimal_index','time_stamp',]
+sensor_unix_column = 'Time since the epoch [s]'
+sensor_idd = 'Station ID'
+sensor_a_temperature = 'Ambient Temperature'
+sensor_s_temperature = 'Surface Temperature'
+sensor_idds_uniq = [  7 ,  8 , 11  ,14 , 17 , 19 , 23  ,26 , 27 , 31,  33  ,34  ,35 , 40 , 46,  47 , 49,  51,
+  55,  57  ,59 , 60 , 61 , 62 , 63 ,65  ,69 , 70 , 71,  72,  73 , 75  ,76 , 79 , 80 , 81,
+  82 , 84 , 87,  88  ,89 , 93 , 96 , 97 , 98 ,100 ,103 ,104 ,109, 111, 121]

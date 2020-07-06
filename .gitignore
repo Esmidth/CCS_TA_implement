@@ -5,3 +5,5 @@ GAN_example/runs/
 GAN_example/__pycache__
 __pycache__/
 Dataset/
+*.h5
+*.pkl

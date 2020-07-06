@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import os,sys
-import utils
+import utilities
 import matplotlib.pyplot as plt
 from numpy import array
 from multiprocessing import Pool
