@@ -58,6 +58,7 @@ def compute(start_point):
         # print(i)
         # print(time_stamps[i],time_stamps[i+1])
         sub_df = df[(df[unix_column] > time_stamps[i]) & (df[unix_column] < time_stamps[i+1])]
+        sub_df = sub_df.dropna()
         sensor_list = sub_df[idd].values
         dict_list.append(sensor_list)
         # idd_dict = {}
@@ -88,7 +89,7 @@ if __name__ == "__main__":
     start_list = np.arange(1162393768,1178747998+day_second,day_second)
     epoch_length = 30
     # start_list = start_list[:3]
-    output = open('dict_list2.pkl','wb')
+    output = open('dict_list3.pkl','wb')
 
 
 
