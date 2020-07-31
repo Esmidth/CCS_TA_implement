@@ -7,3 +7,7 @@ __pycache__/
 Dataset/
 *.h5
 *.pkl
+DCS/data/
+DCS/runs/
+data/
+runs/
