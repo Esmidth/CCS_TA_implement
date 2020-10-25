@@ -4,5 +4,6 @@
         "**/.project": true,
         "**/.settings": true,
         "**/.factorypath": true
-    }
+    },
+    "python.pythonPath": "/home/esmidth/.pyenv/versions/anaconda3-2020.02/envs/ccs_ta/bin/python"
 }

@@ -45,7 +45,7 @@ def coverage_test(df,time_stamps,valid_sensor_list):
 
 # %%
 def compute(start_point):
-    df = pd.read_hdf('day1.h5',str(start_point))
+    df = pd.read_hdf('day2.h5',str(start_point))
     epoch_length = 30
     day_second = 86400
     # week_second = 7*day_second
@@ -89,7 +89,7 @@ if __name__ == "__main__":
     start_list = np.arange(1162393768,1178747998+day_second,day_second)
     epoch_length = 30
     # start_list = start_list[:3]
-    output = open('dict_list3.pkl','wb')
+    output = open('dict_list3_1.pkl','wb')
 
 
 

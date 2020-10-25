@@ -16,6 +16,18 @@
 |results|PNGs outputed from *Rat_Sightings* dataset, demostrate the S.T correlations|
 |tensorflow1.x_tutorial|Offical tutorial of Tensorflow 1.x from Google|
 
+### Standard Procedure for data processing
+
+|step|program files|description|input|output|
+|----|----|----|-----|----|
+|1|lune copy.ipynb|read txt, generate data.h5|txt|data.h5|
+|2|rename.ipynb|divide data in "data.h5" into "day1.h5" with unix_time_timestamps in a day|data.h5|day1.h5 / day2.h5|
+|3|multi_process_compute.py| read day1.h5|day1.h5|dict_list3.pkl / dict_list3_1.pkl|
+|3-1|lune6.ipynb| generate "optimal.h5"|data.h5|optimal.h5|
+|4|read_dict_list_pkl.ipynb||dict_list3.pkl, day1.h5|sub_index_array_drop_na.pkl, sub_index_array.pkl, tensor2.pkl, time_stamp_array.pkl,indices_na.pkl, new_indices.pkl|
+|??5|tensor1.ipynb||optimal_df.h5||
+
+
 ### Program Files
 
 |Name|Description|
@@ -42,7 +54,9 @@
 |tensor2.ipynb| Test dataset read & write|
 |**tensor3.ipynb**| try to work with dataload in Pytorch|
 |tensor4.ipynb| test Pytorch dataloader|
+|tensor_prepare.ipynb| Unknown|
 | test.ipynb | Example of dealing with *data.pkl* |
+|**read_dict_list_pkl.ipynb**|read "dict_list3.pkl" & generate " sub_index_array.pkl" & example of using "dict_list3.pkl" |
 
 ## Procedure
 
@@ -92,4 +106,3 @@
 |CF|partial|
 |NMF| done|
 |NMF-MVL|not yet|
-
