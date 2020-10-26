@@ -25,8 +25,11 @@
 |3|multi_process_compute.py| read day1.h5|day1.h5|dict_list3.pkl / dict_list3_1.pkl|
 |3-1|lune6.ipynb| generate "optimal.h5"|data.h5|optimal.h5|
 |4|read_dict_list_pkl.ipynb||dict_list3.pkl, day1.h5|sub_index_array_drop_na.pkl, sub_index_array.pkl, tensor2.pkl, time_stamp_array.pkl,indices_na.pkl, new_indices.pkl|
-|??5|tensor1.ipynb||optimal_df.h5||
-
+|??5|tensor3.ipynb||optimal_df.h5||
+|5-1|tensor3_intel.ipynb| create pytorch dataset for intel indoor| intel_indoor_10_4.pkl|dataloader_intel_indoor_1_train.pt, dataloader_intel_indoor_1_test.pt|
+|5-2|tensor_prepare.ipynb| create pytorch dataset for sensorscope|tensor2.pkl, time_stamp_array.pkl, indcies_na.pkl, new_indices.pkl|dataloader_temp_train2.pt, dataloader_temp_test2.pt|
+|6|DCS/DCS_GAN_example.ipynb|train & reconstruction for sensorscope|dataloader_temp_test2.pt, dataloader_temp_train2.pt|Nan
+|6-1|DCS/DCS_GAN_intel_indoor.ipynb|train & reconstruction for intel indoor|dataloader_intel_indoor_1_test.pt, dataloader_intel_indoor_1_train.pt|Nan
 
 ### Program Files
 
@@ -58,14 +61,6 @@
 | test.ipynb | Example of dealing with *data.pkl* |
 |**read_dict_list_pkl.ipynb**|read "dict_list3.pkl" & generate " sub_index_array.pkl" & example of using "dict_list3.pkl" |
 
-## Procedure
-
-- read csv files of lune dataset
-- according to stations' GPS location, set a (lat,long) range, dividing the area to 10x10 sub areas.
-- For a specific area, choose the best station with the most logs as the area readings.
-- 从整个数据集中，抽取一个子集，时间长度为一周，拥有最多的有效信号（45个）
-- 在子集中，确定最小的时间间隔，可以生成最多有效的数据帧
-
 ## Dataset
 
 |Python Variable Name| HDF key Name |Description |Current Size|File Name|
@@ -80,16 +75,6 @@
 |time_stamp|||20161|dataset.hdf5|
 |dataloader|||batch_size=500|dataloader.pt|
 
-## Thoughts
-
-### 2020.5.2
-
-|mission|status|
-|----|---|
-|dataloader重新设计，区分测试集，验证集，训练集|done|
-|对数据集进行归一化处理，看看是否能改善GAN的性能|GAN只能生成归一化数据，如果将真实数据归一化，则可骗过Dis。|
-|加上latent z的求导，考虑这一步的作用||
-|引入部分抽样的功能||
 
 ### 2020.6.6
 
