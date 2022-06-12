@@ -5,5 +5,25 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "python.pythonPath": "/home/esmidth/.pyenv/versions/anaconda3-2020.02/envs/ccs_ta/bin/python"
+    "python.pythonPath": "/home/esmidth/.pyenv/versions/anaconda3-2020.02/envs/ccs_ta/bin/python",
+    "workbench.colorCustomizations": {
+        "activityBar.activeBackground": "#50be0d",
+        "activityBar.activeBorder": "#e1ecfd",
+        "activityBar.background": "#50be0d",
+        "activityBar.foreground": "#15202b",
+        "activityBar.inactiveForeground": "#15202b99",
+        "activityBarBadge.background": "#e1ecfd",
+        "activityBarBadge.foreground": "#15202b",
+        "sash.hoverBorder": "#50be0d",
+        "statusBar.background": "#3c8e0a",
+        "statusBar.foreground": "#e7e7e7",
+        "statusBarItem.hoverBackground": "#50be0d",
+        "statusBarItem.remoteBackground": "#3c8e0a",
+        "statusBarItem.remoteForeground": "#e7e7e7",
+        "titleBar.activeBackground": "#3c8e0a",
+        "titleBar.activeForeground": "#e7e7e7",
+        "titleBar.inactiveBackground": "#3c8e0a99",
+        "titleBar.inactiveForeground": "#e7e7e799"
+    },
+    "peacock.remoteColor": "#3c8e0a"
 }
